@@ -1,19 +1,92 @@
 @charset "UTF-8";
         html{
             font-family: Arial, Helvetica, sans-serif;
+
         }
 
         body{
             margin: 0;
             padding: 0;
             background-color: #000b0d86;
+            
         }
 
         .skills{
+            
             width: 500px;
             padding: 40px;
+            
             border-radius: 20px;
-            background-color: #fff;
+            /*background-color: #fff;*/
+            box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.342);
+        }
+
+        .skills ul{
+            list-style: none;
+                        
+        }
+
+        .skills ul li{
+            margin: 20px 0;
+        }
+
+        .skills .barras{
+            background-color: #ccc;
+            display: block;
+            height: 20px;
+            border-radius: 20px;
+            position: relative;
+
+        }
+
+        .barras > span{
+            height: 20px;
+            background: linear-gradient(to right, #fe4701, #ff0054);
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .html{
+            width: 80%;
+            animation: html 2s;
+        }
+
+        .css{
+            width: 50%;
+            animation: css 2s;
+        }
+
+        .py{
+            width: 30%;
+            animation: py 2s;
+        }
+
+        @keyframes html {
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 80%;
+            }
+            
+        }
+        @keyframes css {
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 50%;
+            }
+            
+        }
+        @keyframes py {
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 30%;
+            }
+            
         }
 
         h1{
