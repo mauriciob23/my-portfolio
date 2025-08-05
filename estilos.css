@@ -1,0 +1,870 @@
+@charset "UTF-8";
+
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*DEIXANDO TUDO DENTRO DE UMA MESMA BOX*/
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+
+}
+
+.Principal {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 740;
+    background-image: linear-gradient(to right, #c2cec5, #97A6A0);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: rgb(255, 94, 0);
+}
+
+
+h3.titulo {
+    color: white;
+    text-align: center;
+}
+
+h3.titulo span {
+    color: rgb(255, 94, 0);
+}
+
+header button.active {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.342);
+    transform: scale(1.20);
+}
+
+
+
+nav.menu-pc a.active {
+    /* background-color: #464444; Define a cor de fundo para o link ativo no menu */
+    color: white;
+    /*Cor do texto para o link ativo (class active)*/
+    transform: scale(1.15);
+}
+
+nav.menu-pc li a:hover:not(.active) {
+    /*pseudo classe que aplica estilo quando passa o mouse sobre o elemento. O "not(.active)" garante que o efeito não seja aplicado ao link que ja esta ativo*/
+    /* background-color: rgb(129, 129, 129); cor de fundo ao passar o mouse em cima do nome, incliuso do menu */
+    color: white;
+    /*define a cor da fonte ao passar o mouse sobre ela*/
+
+}
+
+
+
+/* FIM ESTILO GERAL */
+
+/* ESTILO DO CABEÇALHO (HEADER)*/
+header {
+    padding: 40px 4%;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.267); /*efeito de sombra no cabeçalho*/
+}
+
+header>.Principal {
+    /* aplicando na div "Principal" contida no header ">" */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: rgb(158, 156, 156);
+    text-decoration: none;
+    display: inline-block;
+    /*xonvertendo para inline-block para aplicar o comando "transform no houver"*/
+    transition: .2s;
+    /*tempo de transição da animação*/
+}
+
+
+
+header nav.menu-pc a:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.15);
+    /*efeito de zoom ao passar o mouse*/
+}
+
+header nav ul {
+    list-style-type: none;
+
+}
+
+header nav.menu-pc ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+.btn-contato button:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.603);
+    /*sombreado ao passao o mouse*/
+    transform: scale(1.15);
+}
+
+/* Efeito rotativo da imagem */
+header img {
+    border-radius: 50%;
+}
+
+header img.gira-img {
+    /*aplicando efeito de rotação*/
+    animation: rotation-cab
+        /*definindo o tipo*/
+        20s
+        /*definindo o tempo*/
+        infinite
+        /*repetição infinita*/
+        linear
+        /*define a progreção*/
+    ;
+}
+
+@keyframes rotation-cab {
+
+    /*define a animação*/
+    from {
+        transform: rotate(0deg);
+        /*Começa a animação com a imagem na posição original de 0 graus*/
+    }
+
+    to {
+        transform: rotate(360deg);
+        /*Termina a animação com a imagem girada 360 graus*/
+    }
+}
+
+header .logo a:hover{ /*aplicando zoom na imagem da logo ao passar o mouse*/
+    transform: scale(1.15);
+}
+
+header .logo img:hover { /*aplicando sombra na logo do cabeçalho ao passar o mouse*/
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.603);
+    
+}
+
+/*Final efeito rotativo*/
+/*FINAL DO CABEÇÃLHO (HEADER)*/
+
+/*ESCONDENDO MENU-MOBILE*/
+.esconde-menu {
+    display: none;
+}
+
+
+
+/* INICIO MAIN (TOPO)*/
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 40px 4%;
+
+}
+
+section.topo .flex {
+    align-items: center;
+    /*alinhando os itens no centro, apois aplicar display flex*/
+    justify-content: center;
+    gap: 70px;
+    /*espaçamento entre fontes*/
+}
+
+.topo .txt-topo h1 {
+    color: white;
+    font-size: 32px;
+    line-height: 40px;
+    /*espaçamento de linhas*/
+}
+
+.topo .txt-topo h1 span {
+    color: rgb(255, 94, 0);
+}
+
+.topo .txt-topo h2 {
+    color: white;
+}
+
+.topo .txt-topo p {
+    color: white;
+    text-align: justify;
+    margin: 40px 0px;
+}
+
+
+.topo .flex .img-topo img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.767);
+}
+
+@keyframes flutuar {
+
+    /*Aplicando efeito de flutuação*/
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* FIM MAIN (TOPO)*/
+
+/*INICIO MAIN (EXPERIENCIAS)*/
+section.experiencias {
+    padding: 40px 4%;
+}
+
+section.experiencias .flex {
+    gap: 15px;
+}
+
+section.experiencias .especialidades-box {
+    margin: auto;
+    gap: 20px;
+}
+
+.experiencias .especialidades-box {
+    /* background-color: #97A6A0; */
+    color: white;
+    padding: 40px 20px;
+    /* border: 2px solid white; */
+    /* margin-top: 45px; */
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.experiencias .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.623);
+}
+
+.experiencias .especialidades-box h3 {
+    margin: 15px 0;
+}
+
+.experiencias .especialidades-box p {
+    text-align: justify;
+
+}
+
+/*aplicando caixas de projetos*/
+section.experiencias .projetos .flex{
+    margin: 20px;
+    justify-content: center;
+}
+
+.img-projetos{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-projetos:hover{
+    background-position: 100% 100%;
+}
+
+section.experiencias .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a2;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+section.experiencias .overlay:hover{
+    opacity: 1;
+}
+
+/*FIM EXPERIÊNCIAS*/
+
+/*INICIO SKILL*/
+/* CONFIGURAÇÕES DE SOFT SKILLS APLICANDO UMA BARRA DE HABILIDADES*/
+section.skills {
+    padding: 40px
+        /*distanciamento de uma section para outra*/
+        4%
+        /*espaçamento lateral em caso da tela menor*/
+    ;
+}
+
+.skills .interface h3 {
+    color: white;
+}
+
+.skills ul {
+    list-style: none;
+
+}
+
+.skills ul li {
+    margin: 20px 0;
+}
+
+.skills .barras {
+    background-color: #ccc;
+    display: block;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+
+}
+
+.skills .li-box {
+    padding: 20px 20px;
+    border-radius: 20px;
+    transition: .2s;
+
+}
+
+.skills .li-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px white;
+}
+
+.barras>span {
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+    border-radius: 20px;
+}
+
+.html {
+    width: 70%;
+    animation: html 2s;
+}
+
+.css {
+    width: 45%;
+    animation: css 2s;
+}
+
+.py {
+    width: 30%;
+    animation: py 2s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 45%;
+    }
+
+}
+
+@keyframes py {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+/*FIM SKILL*/
+
+
+
+/*INICIO DA OFICINA*/
+section.oficina {
+    padding: 40px 4%;
+}
+
+section.oficina .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.oficina .txt-oficina h1 {
+    color: white;
+    line-height: 40px;
+    /*espaçãmento de linhas*/
+    margin-bottom: 20px;
+    /*espaçamento abaixo*/
+}
+
+.oficina .txt-oficina h1 span {
+    color: rgb(255, 94, 0);
+}
+
+.oficina .txt-oficina p {
+    margin: 20px 0;
+    color: white;
+    text-align: justify;
+}
+
+.oficina .img-oficina img {
+    border-radius: 5%;
+}
+
+.oficina .btn-oficina img {
+    margin: 5px;
+    transition: .2s;
+}
+
+.oficina .btn-oficina img:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.507);
+    transform: scale(1.15);
+}
+
+/*FIM OFICINA*/
+
+
+/*INICIO (CONTATOS)*/
+section.contatos {
+    padding: 40px 20%;
+
+}
+
+/* footer .interface{
+    padding: 40px 4%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.479);
+    margin-bottom: 15px;
+} */
+
+/*animação dos botões*/
+section.contatos ul {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    /* padding-bottom: 30px; */
+    gap: 20px;
+}
+
+section.contatos ul li {
+    width: 68px;
+    /*tamanho do display do item da lista*/
+    height: 68px;
+
+    background-color: rgba(255, 255, 255, 0.205);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.315);
+    border-radius: 60px;
+
+    /*alinhamento no centro do display*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+section.contatos ul li span {
+    /*centralizando o icone/img no centro do botao*/
+    position: absolute;
+}
+
+section.contatos ul li .icon {
+    transition: .3s;
+}
+
+section.contatos ul li:hover .icon {
+    /*sumindo com o icone ao passar o mouse*/
+    transform: scale(0);
+}
+
+section.contatos ul li .text {
+    color: white;
+    font-size: 18px;
+    transform: scale(0);
+    /*colocando o texto em escala inicial de 0 = para ele não aparecer inicialmente*/
+    transition: .2s;
+    transition-delay: .3s;
+    /*aplicando atraso na transição*/
+
+}
+
+section.contatos ul li:hover .text {
+    transform: scale(1);
+}
+
+section.contatos ul li:hover {
+    /*expandindo ao passar o mouse*/
+    width: 190px;
+}
+
+section.contatos .botao-email ul li:hover {
+    /*expandindo ao passar o mouse do email*/
+    width: 380px;
+}
+
+section.contatos ul li::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    /*aplicando efeito degrade com declarações de variaveis utilizando apenas CSS*/
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+
+}
+
+section.contatos ul li:hover::before {
+    opacity: 1;
+}
+
+/*fim animação dos botões*/
+
+section.contatos .flex {
+    /*colocando cada div em um lado da tela*/
+    justify-content: space-between;
+
+}
+
+section .linha-contatos {
+    padding: 20px 0;
+
+}
+
+section.contatos a {
+    color: rgb(158, 156, 156);
+    text-decoration: none;
+    display: inline-block;
+    /*convertendo para inline-block para aplicar o comando "transform no houver"*/
+    transition: .2s;
+    /*tempo de transição da animação*/
+}
+
+section.contatos a:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.15);
+    /*efeito de zoom ao passar o mouse*/
+}
+
+section.contatos img {
+    border-radius: 50%;
+}
+
+section.contatos img:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.466);
+}
+
+/*FIM  (CONTATOS)*/
+
+
+/*aplicando distancia do main para rodapé*/
+main{
+    margin-bottom: 200px;
+}
+
+
+
+/*INICIO FOOTER (RODAPÉ)*/
+
+footer {
+    padding: 20px 0;
+    padding-bottom: 0px;
+    /* margin-bottom: 0; */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.171);
+    
+}
+
+footer.flex{
+    display: block;
+}
+
+/* Efeito rotativo da imagem */
+footer img {
+    border-radius: 50%;
+    
+
+}
+
+footer img.gira-img {
+    /*aplicando efeito de rotação*/
+    animation: rotation
+        /*definindo o tipo*/
+        20s
+        /*definindo o tempo*/
+        infinite
+        /*repetição infinita*/
+        linear
+        /*define a progreção*/
+    ;
+}
+
+@keyframes rotation {
+
+    /*define a animação*/
+    from {
+        transform: rotate(0deg);
+        /*Começa a animação com a imagem na posição original de 0 graus*/
+    }
+
+    to {
+        transform: rotate(-360deg);
+        /*Termina a animação com a imagem girada 360 graus*/
+    }
+}
+
+footer img:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.603);
+}
+
+/*Final efeito rotativo*/
+
+footer p {
+    color: rgba(255, 94, 0, 0.356);
+    text-align: right;
+    font-style: italic;
+}
+
+.borda {
+    /*aplicando linha abaixo da div linha-rodape borda*/
+    border-bottom: 5px solid rgb(255, 94, 0);
+
+}
+
+/*FIM FOOTER (RODAPÉ)*/
+
+/*INICIO CONFIGURAÇÕES MOBILE(responsividade)*/
+
+@media screen and (max-width: 1020px) {
+
+    /*ESTILO MENU MOBILE*/
+
+    .esconde-menu {
+        display: block;
+    }
+
+    .btn-abrir-menu img {
+        border-radius: 2px;
+    }
+
+    .menu-mobile {
+        background-color: black;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 70%;
+        width: 0%;
+        overflow: hidden;
+        transition: .2s;
+    }
+
+
+    .menu-mobile.abrir-menu {
+        /*estilo interativo com JS*/
+        width: 70%;
+    }
+
+    .menu-mobile.abrir-menu~.overlay-menu {
+        /*aplicando efeito de opacidade com JS*/
+        display: block;
+    }
+
+
+    .menu-mobile .btn-fechar {
+        padding: 20px 5%;
+    }
+
+    .menu-mobile .btn-fechar img {
+        border-radius: 0%;
+        cursor: pointer;
+    }
+
+    .btn-abrir-menu img {
+        border-radius: 0%;
+        cursor: pointer;
+
+    }
+
+    .menu-mobile nav ul {
+        text-align: right;
+    }
+
+    .menu-mobile nav ul li a {
+        color: white;
+        font-size: 30px;
+        font-weight: 300;
+        padding: 20px 8%;
+        display: block;
+    }
+
+    .menu-mobile nav ul li a:hover {
+        background-color: #fe4701;
+        color: black;
+    }
+
+    .menu-mobile a.active {
+        color: black;
+        background-color: #fe4701;
+        /*Cor do texto para o link ativo (class active)*/
+    }
+
+    .esconde-menu img:hover {
+        /*aplicando sombra ao passar o mouse no menu hamburguer*/
+        box-shadow: 0px 0px 6px #fe4901;
+        border-radius: 3px;
+    }
+
+
+    .overlay-menu {
+        background-color: rgba(0, 0, 0, 0.692);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8888;
+        display: none;
+    }
+
+    /* FIM DO ESTILO MENU MOBILE */
+
+
+    /* CLASSES GERAIS MOBILE */
+    .topo .flex {
+        flex-direction: column-reverse;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 4%;
+    }
+
+    /* FIM CLASSES GERAIS MOBILE */
+
+    /*CABEÇALHO*/
+    header .btn-contato {/*sumindo com o btn-contato*/
+        display: none;
+    }
+
+    .menu-pc {/*sumindo com o menu-pc*/
+        display: none;
+    }
+
+    /* FIM CABEÇALHO */
+
+    /*TOPO DO SITE/INDEX*/
+    section {
+        padding: 20px 8%;
+    }
+
+
+    section.topo .flex {
+        gap: 40px;
+        /*espaçamento entre fontes*/
+    }
+
+
+
+    /* OFICINA */
+    section.oficina {
+        padding: 20px 8%;
+    }
+
+
+    /*Skils*/
+    section.skills {
+        padding: 20px
+            /*distanciamento de uma section para outra*/
+            8%
+            /*espaçamento lateral em caso da tela menor*/
+        ;
+    }
+
+    /* experiencias */
+    section.experiencias {
+        padding: 20px 8%;
+    }
+
+    /* contatos */
+    section.contatos {
+        padding: 20px 8%;
+
+    }
+
+    section.contatos ul {
+
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        position: relative;
+        /* padding-bottom: 30px; */
+        gap: 40px;
+
+    }
+
+    /* RODAPÉ */
+
+
+}
+
+
+
+
+
+/*FIM CONFIGURAÇÕES MOBILE*/
