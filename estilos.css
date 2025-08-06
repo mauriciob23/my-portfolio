@@ -6,11 +6,14 @@
     padding: 0;
     box-sizing: border-box;
     /*DEIXANDO TUDO DENTRO DE UMA MESMA BOX*/
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
     background-color: black;
     height: 100vh;
+   
+    
 
 }
 
@@ -27,7 +30,6 @@ body {
 .flex {
     display: flex;
 }
-
 
 .btn-contato button {
     padding: 10px 40px;
@@ -81,7 +83,6 @@ nav.menu-pc li a:hover:not(.active) {
     /*define a cor da fonte ao passar o mouse sobre ela*/
 
 }
-
 
 
 /* FIM ESTILO GERAL */
@@ -192,6 +193,7 @@ main {
 
 section {
     padding: 40px 4%;
+    margin-bottom: 150px;
 
 }
 
@@ -226,6 +228,7 @@ section.topo .flex {
 
 
 .topo .flex .img-topo img {
+    border-radius: 10px;
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.767);
@@ -460,6 +463,7 @@ section.oficina .flex {
 
 .oficina .img-oficina img {
     border-radius: 5%;
+    box-shadow: 2px 2px 2px #ff73004f;
 }
 
 .oficina .btn-oficina img {
@@ -608,20 +612,11 @@ section.contatos img:hover {
 
 /*FIM  (CONTATOS)*/
 
-
-/*aplicando distancia do main para rodapé*/
-main{
-    margin-bottom: 200px;
-}
-
-
-
 /*INICIO FOOTER (RODAPÉ)*/
-
 footer {
     padding: 20px 0;
     padding-bottom: 0px;
-    /* margin-bottom: 0; */
+    margin-bottom: 0;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.171);
     
 }
@@ -785,6 +780,7 @@ footer p {
     /* CLASSES GERAIS MOBILE */
     .topo .flex {
         flex-direction: column-reverse;
+        
     }
 
     .flex {
@@ -797,25 +793,33 @@ footer p {
     /* FIM CLASSES GERAIS MOBILE */
 
     /*CABEÇALHO*/
-    header .btn-contato {/*sumindo com o btn-contato*/
+    header .btn-contato {
         display: none;
     }
 
-    .menu-pc {/*sumindo com o menu-pc*/
+    .menu-pc {
         display: none;
     }
 
     /* FIM CABEÇALHO */
 
     /*TOPO DO SITE/INDEX*/
-    section {
-        padding: 20px 8%;
+    section.topo {
+        padding: 20px 10%;
     }
 
 
     section.topo .flex {
+        padding: 20px;
         gap: 40px;
+        
         /*espaçamento entre fontes*/
+        
+    }
+
+    section.topo .flex .img-topo img{
+        width: 300px;
+        height: auto;
     }
 
 
@@ -823,6 +827,11 @@ footer p {
     /* OFICINA */
     section.oficina {
         padding: 20px 8%;
+    }
+
+    section.oficina .flex .img-oficina img{
+       width: 350px;
+        height: auto;
     }
 
 
@@ -840,31 +849,30 @@ footer p {
         padding: 20px 8%;
     }
 
+    section .img-projetos{
+    width: 260px;
+    height: 360px;
+    }
     /* contatos */
     section.contatos {
-        padding: 20px 8%;
+        padding: 20px 4%;
 
     }
 
-    section.contatos ul {
+    section.contatos .flex ul{
+        flex-direction: column;
+    }
 
+    section.contatos ul {
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
 
-        position: relative;
+        
         /* padding-bottom: 30px; */
         gap: 40px;
-
     }
-
-    /* RODAPÉ */
-
-
+    
+    
 }
-
-
-
-
-
 /*FIM CONFIGURAÇÕES MOBILE*/
