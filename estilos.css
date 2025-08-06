@@ -684,7 +684,6 @@ footer p {
 @media screen and (max-width: 1020px) {
 
     /*ESTILO MENU MOBILE*/
-
     .esconde-menu {
         display: block;
     }
@@ -830,7 +829,7 @@ footer p {
     }
 
     section.oficina .flex .img-oficina img{
-       width: 350px;
+       width: 300px;
         height: auto;
     }
 
