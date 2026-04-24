@@ -38,7 +38,3 @@
 </div>
 
 ###
-
-<p>Readme gerado automaticamente na ferramenta online "Profile Readme Generator"</p>
-
-###
