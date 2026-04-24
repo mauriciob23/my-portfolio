@@ -39,8 +39,3 @@
 
 ###
 
-###
-
-<h5>Readme gerado automaticamente na ferramenta "Profile Readme Generator"</h5>
-
-###
