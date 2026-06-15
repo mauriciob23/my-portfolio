@@ -17,8 +17,9 @@
 </div>
 
 ###
-
+<div align="center">
 <img align="center" height="180" src="https://media1.tenor.com/m/rkY5QA5c3VAAAAAd/gato-digitando.gif"  />
+</div>
 
 ###
 
